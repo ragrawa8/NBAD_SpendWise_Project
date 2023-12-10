@@ -13,6 +13,8 @@
   - **Username:** r@a.com
   - **Password:** test123
 
+---
+
 **Steps to Execute the Project**
 
 _Note: Ensure the use of Node version 20.8.1. If any errors occur, delete the `node_modules` directory and proceed with the steps below again._
@@ -32,6 +34,8 @@ _Note: Ensure the use of Node version 20.8.1. If any errors occur, delete the `n
    export NODE_OPTIONS=--openssl-legacy-provider
    ng serve
    ```
+
+---
 
 **Guidelines for Running Test Cases**
 
@@ -78,6 +82,8 @@ ng test
 
 Image placeholder for unit test results.
 
+---
+
 **Visual References:**
 
 - **HomePage**
@@ -108,7 +114,3 @@ Image placeholder for unit test results.
   Placeholder for AlertBox image.
 
 ---
-
-```
-
-```
