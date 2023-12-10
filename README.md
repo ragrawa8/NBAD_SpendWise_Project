@@ -108,7 +108,7 @@ ng test
   ![Dashboard](./screenshots/user-interface/sign-up.png)
 
 - **Expense Table based on selected month**
-  ![HomePage](./screenshots/user-interface/sign-up.png)
+  ![ExpenseDetails](./screenshots/user-interface/expense.png)
 
 - **Charts**
   ![Charts](./screenshots/user-interface/charts.png)
