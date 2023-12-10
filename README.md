@@ -69,7 +69,10 @@ npx cypress open
 
 #### E2E Results
 
-Image placeholders for E2E test results.
+![LoginTest](./screenshots/testing/cypress-login-check.png)
+![LoginCorrectTest](./screenshots/testing/cypress-login-correct.png)
+![LoginInCorrectTest](./screenshots/testing/cypress-login-incorrect.png)
+![VisitHomeTest](./screenshots/testing/cypress-visit-home.png)
 
 ### Unit Tests
 
@@ -80,37 +83,37 @@ ng test
 
 #### Results of Unit Tests
 
-Image placeholder for unit test results.
+![UnitTest](./screenshots/testing/unit-test.png)
 
 ---
 
 **Visual References:**
 
 - **HomePage**
-  Placeholder for HomePage image.
+  ![HomePage](./screenshots/user-interface/home.png)
 
 - **AboutPage**
-  Placeholder for AboutPage image.
+  ![HomePage](./screenshots/user-interface/about.png)
 
 - **Contact Page**
-  Placeholder for ContactPage image.
+  ![AboutPage](./screenshots/user-interface/contact.png)
 
 - **Login**
-  Placeholder for LoginPage image.
+  ![LogIn](./screenshots/user-interface/login.png)
 
 - **Register**
-  Placeholder for SignupPage image.
+  ![Register](./screenshots/user-interface/sign-up.png)
 
 - **Dashboard**
-  Placeholder for Dashboard image.
+  ![Dashboard](./screenshots/user-interface/sign-up.png)
 
 - **Expense Table based on selected month**
-  Placeholder for ExpenseTable image.
+  ![HomePage](./screenshots/user-interface/sign-up.png)
 
 - **Charts**
-  Placeholder for Charts image.
+  ![Charts](./screenshots/user-interface/charts.png)
 
 - **Alert Box**
-  Placeholder for AlertBox image.
+  ![AlertBox](./screenshots/user-interface/alert.png)
 
 ---

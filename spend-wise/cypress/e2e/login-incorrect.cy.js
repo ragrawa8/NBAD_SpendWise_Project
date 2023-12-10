@@ -17,9 +17,7 @@ describe("login tests", () => {
       fully: true,
     });
 
-    cy.get("[data-cy=username")
-      .type("test-user1")
-      .should("have.value", "rhythm");
+    cy.get("[data-cy=username").type("rhythm").should("have.value", "rhythm");
     cy.get("[data-cy=password").type("123").should("have.value", "123");
     cy.get("[data-cy=login-form").submit();
 
