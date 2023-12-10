@@ -1,4 +1,5 @@
-````
+<br>
+
 ---
 
 **Submitted By:**
@@ -46,7 +47,6 @@ cd spend-wise
 export APPLITOOLS_API_KEY=UGT6SGZonA5GCD8mlXSKnifPI1L1BJ2sC2LOAf105pjk4110
 npx cypress open
 ```
-````
 
 #### Potential Errors:
 
@@ -80,31 +80,35 @@ Image placeholder for unit test results.
 
 **Visual References:**
 
-- **HomePage**  
+- **HomePage**
   Placeholder for HomePage image.
 
-- **AboutPage**  
+- **AboutPage**
   Placeholder for AboutPage image.
 
-- **Contact Page**  
+- **Contact Page**
   Placeholder for ContactPage image.
 
-- **Login**  
+- **Login**
   Placeholder for LoginPage image.
 
-- **Register**  
+- **Register**
   Placeholder for SignupPage image.
 
-- **Dashboard**  
+- **Dashboard**
   Placeholder for Dashboard image.
 
-- **Expense Table based on selected month**  
+- **Expense Table based on selected month**
   Placeholder for ExpenseTable image.
 
-- **Charts**  
+- **Charts**
   Placeholder for Charts image.
 
-- **Alert Box**  
+- **Alert Box**
   Placeholder for AlertBox image.
 
 ---
+
+```
+
+```
