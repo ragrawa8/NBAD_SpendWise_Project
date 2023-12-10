@@ -1,12 +1,14 @@
+````
 ---
 
 **Submitted By:**
 
-**Author Name:** Rhythm Agrawal  
-**ID Number:** 801310679
+- **Author Name:** Rhythm Agrawal
+- **ID Number:** 801310679
 
 - **Link for Live Demonstration:** [Live Demonstration]()
-- Use the following credentials for tesing:
+
+- Use the following credentials for testing:
   - **Username:** r@a.com
   - **Password:** test123
 
@@ -15,19 +17,20 @@
 _Note: Ensure the use of Node version 20.8.1. If any errors occur, delete the `node_modules` directory and proceed with the steps below again._
 
 1. Go to the server directory:
-    ```bash
-    cd server
-    npm install
-    node server.js
-    ```
+
+   ```bash
+   cd server
+   npm install
+   node server.js
+   ```
 
 2. Open a new terminal window and execute these commands:
-    ```bash
-    cd spend-wise
-    npm install --force
-    export NODE_OPTIONS=--openssl-legacy-provider
-    ng serve
-    ```
+   ```bash
+   cd spend-wise
+   npm install --force
+   export NODE_OPTIONS=--openssl-legacy-provider
+   ng serve
+   ```
 
 **Guidelines for Running Test Cases**
 
@@ -43,6 +46,7 @@ cd spend-wise
 export APPLITOOLS_API_KEY=UGT6SGZonA5GCD8mlXSKnifPI1L1BJ2sC2LOAf105pjk4110
 npx cypress open
 ```
+````
 
 #### Potential Errors:
 
@@ -51,7 +55,7 @@ npx cypress open
 1. **Restart both the backend server (node server.js) and the frontend server (ng serve).**
 2. **Attempt running the above commands again. This should resolve the issue.**
 
-If experiencing issues related to cypress installation, please execute these commands:
+If experiencing issues related to Cypress installation, please execute these commands:
 
 ```bash
 npm install cypress@13.6.1 -f
