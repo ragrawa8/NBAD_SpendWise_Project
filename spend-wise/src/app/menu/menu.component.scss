@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&family=Poppins:wght@600&display=swap');
+nav.l1 {
+  width: 99%;
+  background-color: #176B87;
+  height: 70px;
+  padding: 0 40px;
+  border-radius: 20px;
+  margin: 5px;
+}
+
+nav.l1 ul,
+nav.l1 ul li {
+  margin: 0;
+  padding: 0 ;
+  list-style: none;
+  display: inline-block;
+}
+
+nav.l1 ul li a {
+  display: block;
+  padding: 0 10px;
+  line-height: 70px;
+  font-size: 1.4em;
+  min-width: 44px;
+  text-decoration: none;
+  color: #176B87;
+  background-color: #04364A;
+  margin: 0;
+}
+
+nav.l1 ul li a:hover,
+nav.l1 ul li a:focus
+{
+  background-color: white;
+  color: #4d5791;
+}
+
+.logo{
+  height: 40px;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+      font-size: 14px;
+  }
+  .page-area article {
+      margin: 10px;
+      max-width: 340px;
+  }
+  nav.l1 ul li a {
+      padding: 0 20px;
+  }
+}
+
+span
+{
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  color: #04364A;
+  font-size: larger;
+  margin-right: 60px;
+}

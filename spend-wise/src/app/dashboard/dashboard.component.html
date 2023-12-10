@@ -1,0 +1,208 @@
+<main role="main" class="container">
+  <pb-breadcrumbs>
+    <a [routerLink]="['/']" style="color: #176b87">Home</a>
+    <p style="color: #176b87">&nbsp;&nbsp;/&nbsp;&nbsp;</p>
+    <p style="color: #176b87">Dashboard</p>
+  </pb-breadcrumbs>
+  <h2 class="">Logged in as - {{ authService.getLoggedUser() }}</h2>
+
+  <div class="card">
+    <div class="card-header">Budget table ({{ getCurrentMonthName() }})</div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table mb-0" *ngIf="allBudget && allBudget.length">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Budget</th>
+              <th>Activity</th>
+              <th>Expenses</th>
+              <th>Remainder</th>
+              <th>Expense Title</th>
+              <th>Expense Value</th>
+              <th>Select Month</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let budget of allBudget; let i = index">
+              <td>{{ budget.title }}</td>
+              <td>${{ budget.budget }}</td>
+
+              <td>
+                <button
+                  class="btn btn-outline-primary btn-sm"
+                  [routerLink]="['/budget', budget.id, 'edit']"
+                >
+                  Edit budget
+                </button>
+              </td>
+              <td>${{ budget.expenses }}</td>
+              <td>${{ budget.budget - budget.expenses }}</td>
+
+              <td>
+                <div class="input-group col-12">
+                  <label class="sr-only" for="expenseTitle"
+                    >Modify expense title</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="expenseTitle"
+                    placeholder="Enter Title"
+                    [(ngModel)]="newExpenseTitle[i]"
+                  />
+                </div>
+              </td>
+              <td>
+                <div class="input-group col-12">
+                  <label class="sr-only" for="expense">Modify expenses</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="expense"
+                    (keyup.enter)="
+                      addExpense(budget, newExpense[i], newExpenseTitle[i], i)
+                    "
+                    [(ngModel)]="newExpense[i]"
+                    placeholder="Cost"
+                  />
+                  <div class="input-group-append">
+                    <button
+                      class="btn btn-outline-primary btn-sm input-group-append"
+                      type="button"
+                      id="expense"
+                      (click)="
+                        addExpense(budget, newExpense[i], newExpenseTitle[i], i)
+                      "
+                    >
+                      Add expense
+                    </button>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <select [(ngModel)]="budget.selectedMonth" class="form-control">
+                  <option value="01">January</option>
+                  <option value="02">February</option>
+                  <option value="03">March</option>
+                  <option value="04">April</option>
+                  <option value="05">May</option>
+                  <option value="06">June</option>
+                  <option value="07">July</option>
+                  <option value="08">August</option>
+                  <option value="09">September</option>
+                  <option value="10">October</option>
+                  <option value="11">November</option>
+                  <option value="12">December</option>
+                </select>
+              </td>
+              <td>
+                <button
+                  class="btn btn-outline-primary btn-sm"
+                  (click)="viewExpenseDetails(budget.id, budget.selectedMonth)"
+                >
+                  View Expenses
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <button
+          class="btn btn-outline-primary btn-sm mr-3"
+          [routerLink]="['/budget/0/edit']"
+        >
+          Add new
+        </button>
+        <span class="time-until-next-month pulse"
+          >Monthly expense would reset in: {{ timeUntilNextMonth }}</span
+        >
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="selectedBudget">
+    <h3>
+      Summary of expenditure for {{ selectedBudget.title }} -
+      {{ getMonthName(selectedMonth) }}
+    </h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Value</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let expense of selectedBudgetExpenses">
+          <td>{{ expense.expenseTitle }}</td>
+          <td>${{ expense.value }}</td>
+          <td>{{ expense.date | date : "shortDate" }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Overview of Budget and Expenditures</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Budget</th>
+          <th>Expenses</th>
+          <th>Remaining Budget</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>${{ selectedBudget.budget }}</td>
+          <td>${{ getTotalExpenses() }}</td>
+          <td>${{ selectedBudget.budget - getTotalExpenses() }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="row center">
+    <div class="col-6">
+      <h3>ChartJS Bar and Line Chart</h3>
+      <p>
+        <canvas
+          id="mixed"
+          class="chart chart-mixed"
+          chart-data="data"
+          chart-options="options"
+          chart-labels="labels"
+          width="400px"
+          height="400px"
+        >
+        </canvas>
+      </p>
+    </div>
+    <div class="col-6">
+      <h3>ChartJS Radar Chart</h3>
+      <p>
+        <canvas
+          id="radar"
+          class="chart chart-radar"
+          chart-data="data"
+          chart-options="options"
+          chart-labels="labels"
+          width="400px"
+          height="400px"
+        >
+        </canvas>
+      </p>
+    </div>
+    <div class="col-6">
+      <h3>ChartJS Pie Chart</h3>
+      <p>
+        <canvas id="myChart" width="400px" height="400px"></canvas>
+      </p>
+    </div>
+    <div class="col-6">
+      <h3>D3JS Pie Chart</h3>
+      <pb-d3donut></pb-d3donut>
+    </div>
+  </div>
+</main>

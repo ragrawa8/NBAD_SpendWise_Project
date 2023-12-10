@@ -1,0 +1,30 @@
+<main role="main" class="container center">
+  <pb-breadcrumbs>
+    <a [routerLink]="['/']">Home</a>
+    <p>&nbsp;&nbsp;/&nbsp;&nbsp;</p>
+    <p>Contact</p>
+  </pb-breadcrumbs>
+
+  <div class="help">
+    <h2>Hello {{ authService.getLoggedUser() }}!</h2>
+    <span
+      >Please contact
+      <a href="mailto:ragrawa8@uncc.edu">ragrawa8@uncc.edu</a> for assistance,
+      or alternatively, fill out the form provided below for further help.
+    </span>
+    <div class="fom">
+      <input placeholder="Enter your Name" /><input
+        placeholder="Enter Your Email"
+      /><input placeholder="Enter your message" />
+      <button id="submitButton">Submit</button>
+    </div>
+  </div>
+</main>
+
+<script>
+  document
+    .getElementById("submitButton")
+    .addEventListener("click", function () {
+      alert("Your message has been submitted!");
+    });
+</script>

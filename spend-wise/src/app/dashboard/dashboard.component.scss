@@ -1,0 +1,116 @@
+h2
+{font: 40px;
+font-weight: bold;}
+
+.card
+{
+padding: 20px;
+border-radius: 5px;
+background-color: #176B87;
+width: 110%;
+margin-left: -50px
+
+}
+
+.card-header
+{
+    background-color: #64CCC5;
+    // border-radius: 20px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+}
+
+table
+{
+    padding: 10px;
+    color: white;
+    font-weight: bolder;
+    background-color: #176B87;
+}
+
+button
+{
+    background-color: #64CCC5;
+    color: aliceblue;
+    border-radius: 10px;
+    height: 45px;
+    margin: auto;
+}
+button:hover
+{
+    background-color: azure;
+    color: #2D4059;
+}
+
+.form-control {
+    height: 45px;
+}
+
+.col-6
+{
+    // background-color: #bfebd2;
+    padding: 10px;
+
+
+    border-radius: 20px;
+    margin-bottom: 10px;
+    // box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+  
+}
+
+.row
+{
+    margin-top: 10px;
+
+   
+}
+
+h3
+{
+    color: #176B87;
+}
+
+h2
+{
+    margin: auto;
+    font-size: medium;
+}
+
+.log{
+
+    left: 35%;
+ 
+    position: relative;
+    border-radius: 40px;
+
+    height: 50%;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;}
+
+    .time-until-next-month {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: blanchedalmond;
+        /* Bootstrap primary color */
+        margin-top: 10px;
+    }
+    
+    /* Add animation for a more dynamic effect */
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+    
+        50% {
+            transform: scale(1.1);
+        }
+    
+        100% {
+            transform: scale(1);
+        }
+    }
+    
+    .pulse {
+        animation: pulse 1s infinite;
+    }
