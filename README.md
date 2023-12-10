@@ -113,7 +113,4 @@ ng test
 - **Charts**
   ![Charts](./screenshots/user-interface/charts.png)
 
-- **Alert Box**
-  ![AlertBox](./screenshots/user-interface/alert.png)
-
 ---
