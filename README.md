@@ -69,10 +69,10 @@ npx cypress open
 
 #### E2E Results
 
-<img src="./screenshots/testing/cypress-login-check.png" alt="LoginTest" width="250"/>
-<img src="./screenshots/testing/cypress-login-correct.png" alt="LoginCorrectTest" width="250"/>
-<img src="./screenshots/testing/login-incorrect.png" alt="LoginInCorrectTest" width="250"/>
-<img src="./screenshots/testing/cypress-visit-home.png" alt="VisitHomeTest" width="250"/>
+<img src="./screenshots/testing/cypress-login-check.png" alt="LoginTest" width="300"/>
+<img src="./screenshots/testing/cypress-login-correct.png" alt="LoginCorrectTest" width="300"/>
+<img src="./screenshots/testing/login-incorrect.png" alt="LoginInCorrectTest" width="300"/>
+<img src="./screenshots/testing/cypress-visit-home.png" alt="VisitHomeTest" width="300"/>
 
 ### Unit Tests
 
